@@ -29,6 +29,13 @@ int main() {
     printf("standard: %s\n", s1);
     strcpy2(mys1, mys2);
     printf("mine: %s\n", mys1);
+
+    printf("Testing strcat(s1, s3)\n");
+    strcat(s1, s2);
+    printf("standard: %s\n", s1);
+    strcat2(mys1, mys2);
+    printf("mine: %s\n", mys1);
+
     return 0;
 }
 
@@ -49,3 +56,18 @@ char* strcpy2(char *dest, char *src) {
     dest[count] = 0;
     return dest;
 }
+
+char* strcat2(char *dest, char *src){
+	int count = 0;
+	int count2;
+	while (dest[count]) {
+		count++;		
+	}
+	for (count2 = 0; count2 < strlen2(src); count2++){
+		dest[count] = src[count2];
+		count++;
+	}
+	dest[count] = 0;
+	return dest;
+}
+	
