@@ -13,17 +13,26 @@ int main() {
     char s1[] = "[?\n?W?";
     char s2[] = "hello";
     char s3[] = "goodbye";
+    char s4[] = "This is pie.";
+    char s5[] = "     /";
     char mys1[] = "[?\n?W?";
     char mys2[] = "hello";
     char mys3[] = "goodbye";
+    char mys4[] = "This is pie.";
+    char mys5[] = "     /";
 
     printf("s1: %s\n", s1);
     printf("s2: %s\n", s2);
-    printf("s3: %s\n\n", s3);
+    printf("s3: %s\n", s3);
+    printf("s4: %s\n", s4);
+    printf("s5: %s\n\n", s5);
 
     printf("Testing strlen(s2)\n");
     printf("standard: %d\n", (int) strlen(s2));
     printf("mine: %d\n", strlen2(mys2));
+    printf("standard: %d\n", (int) strlen(s5));
+    printf("mine: %d\n", strlen2(mys5));
+    
 
     printf("Testing strcpy(s1, s2)\n");
     strcpy(s1, s2);
@@ -58,6 +67,10 @@ int main() {
     printf("Testing strchr(s1, 'z')\n");
     printf("standard: %p\n", strchr("abcz", 'z'));
     printf("mine: %p\n", strchr2("abcz", 'z'));
+    printf("Testing strchr(s1, ' ')\n");
+    printf("standard: %p\n", strchr("abcz ", ' '));
+    printf("mine: %p\n", strchr2("abcz ", ' '));
+    
 
     return 0;
 }
